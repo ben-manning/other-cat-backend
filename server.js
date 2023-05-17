@@ -11,6 +11,10 @@ require('./config/database');
 // MIDDLEWARE
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+  res.json({ msg: 'Welcome to Bens API'});
+})
+
 // ROUTERS
 app.use('/cats', catRoutes);
 
